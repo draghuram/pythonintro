@@ -5,9 +5,9 @@ Lesson 1 - Numbers, Strings, Lists ...
 Welcome to the very first lesson on Python. I am sure you are going to
 have a very nice time learning to program.
 
-Python is a very popular programming lanuage that is used in wide
+Python is a very popular programming language that is used in a wide
 variety of applications, games, and in building web sites. In this
-course, we will only focus on the very basic features of the lanuage
+course, we will only focus on the very basic features of the language
 as the main emphasis here is not to master the language but rather to
 understand general programming concepts. Keep in mind that many things
 you learn here apply to other programming languages as well.
@@ -32,7 +32,7 @@ class.
     >>> 10.0
     10.0
 
-Python supports all the usual arithmentic operations on numbers so you
+Python supports all the usual arithmetic operations on numbers so you
 can use it as a calculator::
 
     >>> 42 + 10
@@ -59,7 +59,7 @@ is doing if it is not already clear).
 
 Let us now move to "strings". You will need to manipulate strings in
 many programs so it is very useful to have good knowledge about
-them. Strings are sequence of characters. A single character is also a
+them. A string is a sequence of characters. A single character is also a
 string which has a length of 1. In Python, strings are enclosed in
 either double quotes or single quotes. ::
 
@@ -119,17 +119,17 @@ Notice how Python is adding a "space" between items that are passed to
 "print".
 
 As you have already seen, you use a function by passing it some values
-in parethesis. However, this is not mandatory. Here is an example:
+in parenthesis. However, passing values is not mandatory (but you
+still need parenthesis). Here is an example:
 
     >>> print()
 
-Python has many ther functions which we will learn in later lessons. 
+Python has many other functions which we will learn in later lessons. 
 
 Variables
 ---------
 
-Let us take a small detour from data types by learning about
-variables. Many times in your program, you need to store values before
+Many times in your program, you need to store values before
 using them later. For this, you use "variables". Here is an example::
 
     >>> age = 42
@@ -140,7 +140,7 @@ use "age" to mean 42 at any place in the code.
 
 You can choose any name you want for variables (subject to some rules)
 but it is very important that you name them appropriately. **In
-particualr, variables should be named such that they describe the
+particular, variables should be named such that they describe the
 values they may contain.**. This helps you and others in understanding
 the code, especially when you are reading it at a later time.
 
@@ -191,7 +191,7 @@ To reverse a list:::
     >>> print(colors)
     ['magenta', 'blue', 'green']
 
-Notice how "sort" and "reverse" operations changed the data stores in
+Notice how "sort" and "reverse" operations changed the data stored in
 the variable "colors". What if we don't want to affect the data but
 want to get a new list that is sorted or reversed?
 ::
@@ -209,6 +209,24 @@ want to get a new list that is sorted or reversed?
     ['blue', 'green', 'magenta']
     >>> print(colors)
     ['magenta', 'blue', 'green']
+
+Assignment
+----------
+
+There is a new object in the solar system that is found to be
+traveling at 40000 miles per hour. 
+
+Write a program that calculates the number of days it takes this
+object to travel from Sun to Earth. Your program should print the
+following when run: ::
+
+    It takes N days
+
+where ``N`` is the value your program should calculate.
+
+**Note**. This object is named 
+`Oumuamua <https://en.wikipedia.org/wiki/%CA%BBOumuamua>`_ and in reality, it
+doesn't travel from Sun to Earth in straight line. 
 
 
 

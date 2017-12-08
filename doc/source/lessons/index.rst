@@ -1,6 +1,6 @@
 
-Welcome to Lesson notes
-=======================
+Lesson notes
+============
 
 .. toctree::
    :maxdepth: 2
