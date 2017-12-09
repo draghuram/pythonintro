@@ -9,7 +9,7 @@ In order to follow along, you need access to Python. One option is to
 use Python that is available on your computer (it usually comes
 preinstalled on Linux and perhaps even Mac) or install it
 yourself. But there is another far easier option which is handy if you
-onpy have access to Chromebook (as most middle school students do
+only have access to Chromebook (as most middle school students do
 these days). That option is to use Python in the cloud and in
 particular this one:
 
@@ -32,7 +32,7 @@ will use version "3.6".
 For writing code in a file, click on ``Files`` from the main page and
 you will see how to open a new file. **Do remember to name your files
 with ".py" extension**. This will give you syntax highlighting. The
-script file can be run by clickin on ``>>> Run``.
+script file can be run by clicking on ``>>> Run``.
 
 Finally, there is a more advanced option that you will need to use
 once you start writing more complicated scripts. From the dashboard,
