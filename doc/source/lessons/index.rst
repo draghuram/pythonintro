@@ -7,3 +7,4 @@ Lesson notes
    :caption: Contents:
 
    lesson1
+   lesson2
