@@ -276,13 +276,13 @@ the triangle is "scalene".
 
 Here are some examples::
 
-    $ triangle_type.py 10 10 10
+    $ python3 triangle_type.py 10 10 10
     equilateral
 
-    $ triangle_type.py 10 10 15
+    $ python3 triangle_type.py 10 10 15
     isosceles
 
-    $ triangle_type.py 10 11 12
+    $ python3 triangle_type.py 10 11 12
     scalene
 
 Note that you can get the value of sides in your pgoram as follows::
