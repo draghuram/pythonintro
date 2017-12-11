@@ -285,7 +285,7 @@ Here are some examples::
     $ python3 triangle_type.py 10 11 12
     scalene
 
-Note that you can get the value of sides in your pgoram as follows::
+Note that you can get the value of sides in your program as follows::
 
     import sys
 
