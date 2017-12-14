@@ -133,6 +133,22 @@ Some more examples::
 
 The operators *and*, *or*, *not* are known as *logical operators*. 
 
+Lastly, note that comparison operators can be chained, like so::
+
+    >>> a < b < c
+
+This is same as::
+
+    >>> (a < b) and (b < c)
+
+Similarly,::
+
+    >>> a == b == c
+
+which is same as::
+
+    >>> (a == b) and (b == c)
+
 Accessing list elements
 -----------------------
 
