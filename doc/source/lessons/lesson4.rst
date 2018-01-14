@@ -21,7 +21,7 @@ Python language itself supports them. But there is nothing special
 about them. You can write your own functions and use them in your
 code. Here is an example::
 
-    def sum(a, b):
+    def add(a, b):
         return a + b
 
 This is a simple function that takes two parameters and returns their
@@ -51,10 +51,17 @@ to add two numbers. Here is a sample::
     num1 = int(sys.argv[1])
     num2 = int(sys.argv[2])
 
-    total = sum(num1, num2)
+    def add(a, b):
+        return a + b
+
+    total = add(num1, num2)
     print("Total =", total)
 
-*Write a function that checks if a number is even or off*::
+To run this program::
+
+    $ python3 add.py 1 2
+
+*Write a function that checks if a number is even or odd*::
 
     is_even(n) # returns True or False
 
@@ -76,7 +83,7 @@ function at other places.
 This way, the actual computation is present in only place. If you find
 a bug in the code later on, you only need to fix at one place.
 
-As an example, once you have the function `sum()` as shown above, you
+As an example, once you have the function `add()` as shown above, you
 can now call it everywhere in your code where you need to add two
 numbers. In this case, the actual code is extremely simple but in many
 cases, the code in function will be larger.
@@ -94,8 +101,3 @@ palindrome or not. Examples::
     is not a palindrome
 
 Remember to use functions that we learned in this lesson.
-
-
-
-
-
