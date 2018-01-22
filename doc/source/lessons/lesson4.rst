@@ -88,6 +88,19 @@ can now call it everywhere in your code where you need to add two
 numbers. In this case, the actual code is extremely simple but in many
 cases, the code in function will be larger.
 
+Guidelines for writing functions
+--------------------------------
+
+- Name functions descriptively.
+
+- Keep all the functions at beginning of the file and write the main
+  code after that.
+
+- Functions should not have large number of parameters. If you ever
+  end up writing a function that accepts large number of parameters,
+  you can usually break it in to multiple functions where each
+  function accepts small number of parameters.
+
 Assignment
 ----------
 
