@@ -13,6 +13,7 @@ Welcome to "Introduction to Python"'s documentation!
    intro
    lessons/index
    concepts/index
+   problems/index
 
 
 Indices and tables
