@@ -8,3 +8,4 @@ Problems
 
    guidelines
    tennis_match_scores
+   special_ssn
