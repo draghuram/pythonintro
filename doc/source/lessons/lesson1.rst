@@ -1,6 +1,6 @@
 
-Lesson 1 - Numbers, Strings, Lists ...
-======================================
+Lesson 1 - Numbers, Strings
+===========================
 
 Welcome to the very first lesson on Python. I am sure you are going to
 have a very nice time learning to program.
@@ -138,6 +138,9 @@ Here, we could have used "42" directly but instead, we created a
 variable called "age" which now contains the value "42". You can now
 use "age" to mean 42 at any place in the code.
 
+``=`` is known as `assignment operator` which assigns values from
+right side to variables on the left side.
+
 You can choose any name you want for variables (subject to some rules)
 but it is very important that you name them appropriately. **In
 particular, variables should be named such that they describe the
@@ -147,90 +150,19 @@ the code, especially when you are reading it at a later time.
 Apart from naming variables descriptively, you should not use Python
 function names to name your variables.
 
-Lists
------
+Formatting strings
+------------------
 
-Let us now get back to learning about types supported by Python. Here
-we learn about "list" type. A list is a collection of other types. For
-example: a list of strings or a list of integers. A list is formed by
-enclosing the items with "square brackets", like so::
+You can combine strings and integers and even other data types in any
+format you want to form a new string. This is especially useful if you
+want to print some information to the console.
 
-    >>> ["red", "green", "blue"]
+Here is an example::
 
-Let us use a variable to contain a list and then, we can see some list
-operations. ::
+    >>> teststring = "This year: {}, Month: {}, Date: {}".format(2019, 2, 22)
+    >>> print(teststring)
+    'This year: 2019, Month: 2, Date: 22'
 
-    >>> colors = ["red", "green", "blue"]
-
-    >>> print(colors)
-    ['red', 'green', 'blue']
-
-    # To add items to a list at the end.
-    >>> colors.append("magenta")
-    >>> print(colors)
-    ['red', 'green', 'blue', 'magenta']
-
-    # To remove an item
-    >>> colors.remove("red")
-    >>> print(colors)
-    ['green', 'blue', 'magenta']
-
-Notice how the variable "colors" contains a list and various
-list operations can be performed using the variable.
-
-To sort the list alphabetically:
-::
-
-    >> colors.sort()
-    >>> print(colors)
-    ['blue', 'green', 'magenta']
-
-To reverse a list:::
-
-    >> colors.reverse()
-    >>> print(colors)
-    ['magenta', 'blue', 'green']
-
-Notice how "sort" and "reverse" operations changed the data stored in
-the variable "colors". What if we don't want to affect the data but
-want to get a new list that is sorted or reversed?
-::
-
-    >>> print(colors)
-    ['magenta', 'blue', 'green']
-
-    # This gives a new list, leaving the original list unaffected.
-    >>> sorted(colors)
-    ['blue', 'green', 'magenta']
-    >>> print(colors)
-    ['magenta', 'blue', 'green']
-    
-    >>> reversed(colors)
-    ['blue', 'green', 'magenta']
-    >>> print(colors)
-    ['magenta', 'blue', 'green']
-
-Assignment
-----------
-
-There is a new object in the solar system that is found to be
-traveling at 40000 miles per hour. 
-
-Write a program that calculates the number of days it takes this
-object to travel from Sun to Earth. Your program should print the
-following when run: ::
-
-    It takes N days
-
-where ``N`` is the value your program should calculate.
-
-**Note**. This object is named 
-`Oumuamua <https://en.wikipedia.org/wiki/%CA%BBOumuamua>`_ and in reality, it
-doesn't travel from Sun to Earth in straight line. 
-
-
-
-
-    
-
+Here, ``{}`` are just place holders. They will be replaced by the
+values you pass to ``format()`` function.
 
