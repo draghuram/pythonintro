@@ -3,8 +3,9 @@ Lesson 2 - Lists, for and if statements
 =======================================
 
 In the last lesson, we learned basic data types - numbers and
-strings - and also about lists. In this lesson, we will study some
-more operations that Python provides for these data types.
+strings. In this lesson, we will study a new data type called
+`List`. We will also learn about some more operations that Python
+provides for these data types.
 
 As you have already seen, it is useful to store values in variables so
 that our code is more readable. Example::
@@ -24,7 +25,85 @@ functions called *built-in functions*. These are called *built-in*
 because they are provided by the language itself. As you will learn
 later, you can also write functions and in fact, that is how you will
 organize your code for the most part. For a full list of built-in
-functions, see `here <https://docs.python.org/3/library/functions.html>`_.
+functions, see `here
+<https://docs.python.org/3/library/functions.html>`_.
+
+Lists
+-----
+
+Let us now get back to learning about data types supported by
+Python. Here we learn about "list" type. A list is a collection of
+other types. For example: a list of strings or a list of integers. A
+list is formed by enclosing the items with "square brackets", like
+so:: 
+
+    >>> ["red", "green", "blue"]
+
+Let us use a variable to contain a list and then, we can see some list
+operations. ::
+
+    >>> colors = ["red", "green", "blue"]
+
+    >>> print(colors)
+    ['red', 'green', 'blue']
+
+    # To add items to a list at the end.
+    >>> colors.append("magenta")
+    >>> print(colors)
+    ['red', 'green', 'blue', 'magenta']
+
+    # To remove an item
+    >>> colors.remove("red")
+    >>> print(colors)
+    ['green', 'blue', 'magenta']
+
+Notice how the variable "colors" contains a list and various
+list operations can be performed using the variable.
+
+A list contains elements of different data types. For example, the
+following list contains both strings and integers.::
+
+    >>> testlist = ["abc", "def", 1, 2]
+
+Even though this is possible, most of the times, a list contains
+elements all of the same type.
+
+Here are some more operations possible on lists.
+
+To sort the list alphabetically:
+::
+
+    >> colors.sort()
+    >>> print(colors)
+    ['blue', 'green', 'magenta']
+
+To reverse a list:::
+
+    >> colors.reverse()
+    >>> print(colors)
+    ['magenta', 'blue', 'green']
+
+Notice how "sort" and "reverse" operations changed the data stored in
+the variable "colors". What if we don't want to affect the data but
+want to get a new list that is sorted or reversed?
+::
+
+    >>> print(colors)
+    ['magenta', 'blue', 'green']
+
+    # This gives a new list, leaving the original list unaffected.
+    >>> sorted(colors)
+    ['blue', 'green', 'magenta']
+    >>> print(colors)
+    ['magenta', 'blue', 'green']
+    
+    >>> reversed(colors)
+    ['blue', 'green', 'magenta']
+    >>> print(colors)
+    ['magenta', 'blue', 'green']
+
+len()
+-----
 
 You will use the built-in function ``len()`` to find the size of the
 lists as well as that of strings. Examples::
@@ -38,21 +117,6 @@ lists as well as that of strings. Examples::
     # Empty string
     >>> len("")
     0
-
-Now, let us move on to couple of very useful operations on strings
-called *split* and *join*. As the name indicates, you would use
-*split* to break a string into multiple components and *join* is used
-to do the reverse.
-::
-
-    >>> "a/b/c".split("/")
-    ['a', 'b', 'c']
-    >>> "one two".split()
-    ['one', 'two']
-    >>> "/".join(['a', 'b', 'c'])
-    'a/b/c'
-    >>> ' '.join(['one', 'two'])
-    'one two'
 
 Boolean expressions
 -------------------
@@ -108,46 +172,26 @@ BTW, "else" part of the "if" statement is optional. For example::
 
 In this case, nothing happens if the number is not even.
 
-Finally, you can combine multiple conditions, like so::
+Finally, it is possible to check for multiple conditions using a
+different variation of ``if`` statement. In the following example, we
+are checking if a number ``n`` is
 
-    >>> if (i > 4) and (j < 2):
-    ...     print("do something")
+- less than 10
+- between 10 and 20
+- or above 20
 
-Here, print() will be run only if *both* conditions are true.
+::
 
-    >>> if (i > 4) or (j < 2):
-    ...     print("do something")
-
-Here, print() will be run if *one* of the conditions is true. 
-
-    >>> if not some_condition:
-    ...     print("condition is not true")
-
-Some more examples::
-
-    >>> if "red" in colors:
-    ...     print("red is present")
-
-    >>> if "red" not in colors:
-    ...     print("red is not present")
-
-The operators *and*, *or*, *not* are known as *logical operators*. 
-
-Lastly, note that comparison operators can be chained, like so::
-
-    >>> a < b < c
-
-This is same as::
-
-    >>> (a < b) and (b < c)
-
-Similarly,::
-
-    >>> a == b == c
-
-which is same as::
-
-    >>> (a == b) and (b == c)
+    >>> n = 10
+    >>> if n < 10:
+    ...     print("less than 10")
+    ... elif n < 20:
+    ...     print("less than 20")
+    ... else:
+    ...     print("above 20")
+    ... 
+    less than 20
+    
 
 Accessing list elements
 -----------------------
@@ -176,140 +220,29 @@ You will get an error if you try to use an invalid index.::
 
     IndexError: list index out of range
 
-Processing all elements of a list
----------------------------------
+It is also possible to access elements from the end of the list
+instead of from the start. For example, the following will give you
+the last element of a list::
 
-Let us say that we have a list and we want to do some operation on all
-the elements of the list. For example, to print entire list, we can do
-something like::
-
-    >>> print(colors)
-    ['red', 'green', 'blue']
-
-But what if we want to print each color on a different line? Here is
-one way to do it::
-
-    >>> for color in colors:
-    ...    print(color)
-
-    red
-    green
-    blue
-
-You use *for* loop to go over each item in the list and do something
-with it. This process is called *iteration*. In each iteration, one
-item will be available for you to process. 
-
-To sum all the numbers in a list::
-
-    >>> numbers = [10, 1, 3, 4]
-    >>> total = 0
-    >>> for num in numbers:
-    ....    total = total + num
-
-    >>> print(total)
-    18
-
-Note that you can also use iteration to process each letter in a
-string. ::
-
-    >>> for x in "test":
-    ...   print(x)
-    ... 
-    t
-    e
-    s
-    t
-
-Command line arguments
-----------------------
-
-In the last lesson, we saw how we can write code in a file and run it
-(using `pythonanywhere <https://www.pythonanywhere.com/>`_). Now, let
-us see how we can pass data to a program. 
-
-Open a file, say "test.py" and add the following code in it.::
-
-    import sys
-
-    print(sys.argv[1])
-
-From Dashboard, click on ``$ Bash``. You will get a terminal where you
-can enter commands. ::
-
-    $ ls
-
-This should list all the files including your new file "test.py". Let
-us run it.::
-
-    $ python3 test.py Hi
-    Hi
-
-    $ python3 test.py Hello
-    Hello
-
-    $ python3 test.py "Hello World!"
-    Hello World!
-
-As you can see, our little program is printing whatever value we are
-passing from the command line. The values we enter at the command
-are available in the list ``sys.argv``. The very first element in this
-list is the name of the program itself so our input starts from
-index 1. That is why we used ``sys.argv[1]`` to get the input here.
-
-Now, let us write a program that takes a number as input and prints if
-that number is even or odd. We already saw how to do this when we
-studied boolean operations but now, our code should work with any
-number.
-
-Open a file called "even_odd.py" and enter the following code::
-
-    import sys
-
-    # We use `int' built-in function to convert input string to a number.
-    num = int(sys.argv[1])
-
-    if num % 2 == 0:
-        print("even")
-    else:
-        print("odd")
-
-Now, let us run the program from Bash console.::
-
-    $ python3 even_odd.py 4
-    even
-    $ python3 even_odd.py 5
-    odd
+    >>> colors[-1]
+    >>> # To access second element from the last:
+    >>> colors[-2]
 
 Assignment
 ----------
 
-Given three integers indicating the length of a triangle's sides, your
-program should print the type of the triangle. Remember that if all
-three sides are equal, the triangle is "equilateral". If only two
-sides are equal, it is "isosceles". If all three sides are different,
-the triangle is "scalene".
+There is a new object in the solar system that is found to be
+traveling at 40000 miles per hour. 
 
-Here are some examples::
+Write a program that calculates the number of days it takes this
+object to travel from Sun to Earth. Your program should print the
+following when run: ::
 
-    $ python3 triangle_type.py 10 10 10
-    equilateral
+    It takes N days
 
-    $ python3 triangle_type.py 10 10 15
-    isosceles
+where ``N`` is the value your program should calculate.
 
-    $ python3 triangle_type.py 10 11 12
-    scalene
-
-Note that you can get the value of sides in your program as follows::
-
-    import sys
-
-    side1 = int(sys.argv[1])
-    side2 = int(sys.argv[2])
-    side3 = int(sys.argv[3])
-
-
-
-
+**Note**. This object is named 
+`Oumuamua <https://en.wikipedia.org/wiki/%CA%BBOumuamua>`_ and in
+reality, it doesn't travel from Sun to Earth in straight line. 
 
