@@ -1,5 +1,5 @@
 
-Lesson 2 - Lists, for and if statements
+Lesson 2 - Lists and if statements
 =======================================
 
 In the last lesson, we learned basic data types - numbers and
